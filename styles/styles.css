@@ -1,0 +1,28 @@
+* {
+    background-color: rgb(70, 81, 135);
+}
+
+h1 {
+    color: rgb(255, 0, 255);
+    text-align: center;
+}
+
+img {
+    width: 40%;
+    height: 40%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.pokeball {
+    width: 15%;
+    height: 10%;
+}
