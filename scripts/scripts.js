@@ -29,5 +29,22 @@ async function atraparPokemon(num) {
         div.appendChild(pintarImagen)
         pintarImagen.src = imagen2
     }
+    if (num === 1) {
+        const pokemonVsPerrito = document.createElement("h1")
+        div.appendChild(pokemonVsPerrito)
+        pokemonVsPerrito.innerHTML = "Batalla pokemon vs Perrito"
+    }
 }
 atraparPokemon(1)
+atraparPokemon(2)
+async function adoptarPerrito(num) {
+    const datoPerro = await fetch('https://dog.ceo/api/breeds/image/random');
+    const perro = await datoPerro.json()
+    const imagenPerro = perro.message
+    //pintar la imagen del perro
+    const div = document.getElementById("pokemon" + num)
+    const pintarImagenPerro = document.createElement("img")
+    div.appendChild(pintarImagenPerro)
+    pintarImagenPerro.src = imagenPerro
+}
+adoptarPerrito(2)
